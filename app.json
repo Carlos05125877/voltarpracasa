@@ -9,14 +9,33 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Permita que o aplicativo acesse sua localização para mostrar onde você está no mapa.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Permita que o aplicativo acesse sua localização para rastreá-lo mesmo em segundo plano.",
+        "NSLocationAlwaysUsageDescription": "Permita que o aplicativo acesse sua localização para rastreá-lo mesmo em segundo plano."
+      },
+      "config": {
+        "googleMapsApiKey": "SE_VOCE_ESTIVER_USANDO_Maps_TAMBEM_AQUI"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "SE_VOCE_ESTIVER_USANDO_Maps_TAMBEM_AQUI"
+        }
+      },
+      "package": "com.carlossouza05.voltarpracasa"
     },
     "web": {
       "bundler": "metro",
@@ -32,6 +51,18 @@
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Permita que o aplicativo acesse sua localização para mostrar onde você está no mapa e rastreá-lo."
+        }
+      ],
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsDownloadToken": "sk.YOUR_MAPBOX_SECRET_DOWNLOAD_TOKEN"
         }
       ]
     ],

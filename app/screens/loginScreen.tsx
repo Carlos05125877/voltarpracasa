@@ -1,6 +1,6 @@
+import { router } from 'expo-router';
 import React, { useState } from 'react';
 import {
-  Alert,
   SafeAreaView,
   StyleSheet,
   Text,
@@ -10,13 +10,15 @@ import {
 import Input from '../../components/Input';
 import LogoSvg from '../../components/LogoSvg';
 
- function LoginScreen(): React.JSX.Element {
+export default function LoginScreen() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [showSenha, setShowSenha] = useState(false);
 
   function handleEntrar() {
-    Alert.alert('Login', `Email: ${email}\nSenha: ${senha}`);
+    
+    router.push('/Screens/HomeScreen');
+
   }
 
   return (
@@ -215,4 +217,3 @@ const styles = StyleSheet.create({
     zIndex: 15,
   },
 });
-export default LoginScreen;
