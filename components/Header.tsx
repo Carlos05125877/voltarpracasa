@@ -1,13 +1,11 @@
-import AntDesign from '@expo/vector-icons/AntDesign';
+import Feather from '@expo/vector-icons/Feather';
 import { useRouter } from "expo-router";
 import * as React from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, TouchableOpacity, View } from "react-native";
 
-interface HeaderProps {
-  title?: string;
-}
 
-const Header: React.FC<HeaderProps> = ({ title }) => {
+
+const Header = () => {
     const router = useRouter();
 
     return (
@@ -15,12 +13,10 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
             <View style={styles.Header} >
             <View style={styles.side}>
                 <TouchableOpacity style={styles.iconButton} onPress={() => router.back()}>
-                    <AntDesign name="arrowleft" size={24} color="white" />
+                    <Feather name="menu" size={24} color="white" />
                 </TouchableOpacity>
             </View>
-            <View style={styles.titleContainer}>
-                {title && <Text style={styles.title}>{title}</Text>}
-            </View>
+
             <View style={styles.side} />
             </View>
         </View>

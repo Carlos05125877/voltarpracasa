@@ -1,4 +1,5 @@
 
+import InfoPerfil from '@/components/InfoPerfil';
 import React from 'react';
 import {
   SafeAreaView,
@@ -16,12 +17,15 @@ export default function HomeScreen() {
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <Header title="Dentro da Zona Segura"/>
+        <Header />
         <View style={styles.areaMapa}>
         <Mapa />
         </View>
         <View style={styles.areaSelect}>
           <Select />
+        </View>
+        <View >
+          <InfoPerfil />
         </View>
 
       </View>
@@ -33,16 +37,17 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     height: 400,
-    marginTop: 40,
+    marginTop: 20,
     flexDirection: 'column',
   },
   areaMapa: {
-    marginTop: 20,
+    marginTop: 25,
     alignItems: 'center',
     justifyContent: 'center',
   },
   areaSelect: {
-    marginTop: 50,
+    marginTop: 30,
+    marginBottom: 10,
     alignItems: 'center',
     justifyContent: 'center',
   },

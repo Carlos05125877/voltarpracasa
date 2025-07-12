@@ -1,7 +1,5 @@
-import AntDesign from '@expo/vector-icons/AntDesign';
-import Entypo from '@expo/vector-icons/Entypo';
 import Feather from '@expo/vector-icons/Feather';
-import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { useRouter } from "expo-router";
 import * as React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
@@ -14,24 +12,12 @@ const Select = () => {
         <View style={styles.container}>
             <View style={styles.side}>
                 <TouchableOpacity style={styles.iconButton} onPress={() => router.push('/Screens/HomeScreen')}>
-                    <Feather name="clock" size={40} color="#1056D9" />
+                    <Feather name="clock" size={30} color="#1056D9" />
                     <Text style={styles.title}>Histórico</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.iconButton} onPress={() => router.push('/Screens/HomeScreen')}>
-                    <FontAwesome5 name="user-alt" size={40} color="#1056D9" />
-                    <Text style={styles.title}>Perfil</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.iconButton} onPress={() => router.push('/Screens/HomeScreen')}>
-                    <Entypo name="help-with-circle" size={40} color="#1056D9" />
-                    <Text style={styles.title}>Ajuda</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.iconButton} onPress={() => router.push('/Screens/HomeScreen')}>
-                    <AntDesign name="edit" size={40} color="#1056D9" />
-                    <Text style={styles.title}>Editar</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.iconButton} onPress={() => router.push('/Screens/HomeScreen')}>
-                    <Entypo name="map" size={40} color="#1056D9" />
-                    <Text style={styles.title}>Rota</Text>
+                    <Ionicons name="shield-checkmark-sharp" size={30} color="#1056D9" />
+                    <Text style={styles.title}>Zona Segura</Text>
                 </TouchableOpacity>
             </View>
         </View>
